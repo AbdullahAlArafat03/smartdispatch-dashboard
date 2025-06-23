@@ -20,9 +20,11 @@ st.text("Plain text")
 
 # Sidebar
 
-st.sidebar.title("Sidebar Title")
-st.sidebar.selectbox("Choose option", ["A", "B"])
-st.sidebar.slider("Select value", 0, 100, 50)
+st.sidebar.title("Scenario Designer")
+vehicle_type = st.sidebar.selectbox("Vehicle Type", ["Truck", "Bike", "Van"])
+fleet_size = st.sidebar.slider("Number of vehicles", 1, 50, 10)
+add_location = st.sidebar.text_input("New delivery point (lat,lon)")
+delivery_deadline = st.sidebar.time_input("Latest delivery time")
 st.sidebar.button("Run")
 
 # Layouts
