@@ -27,6 +27,11 @@ add_location = st.sidebar.text_input("New delivery point (lat,lon)")
 delivery_deadline = st.sidebar.time_input("Latest delivery time")
 st.sidebar.button("Run")
 
+# Route Visualisation
+
+st.map(map_data)
+st.scatter_chart(map_data)
+
 # Layouts
 
 col1, col2 = st.columns(2)
