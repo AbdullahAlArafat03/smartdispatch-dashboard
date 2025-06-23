@@ -14,7 +14,10 @@ st.set_page_config(page_title="SmartDispatch Dashboard", layout="wide")
 
 st.title("Main Title")
 st.header("Header")
-st.subheader("Subheader")
+st.subheader("Optimized Routes")
+st.map(result['map_data'])
+st.subheader("Vehicle Assignment")
+st.dataframe(result['schedule'])
 st.markdown("**Markdown** text here.")
 st.text("Plain text")
 
@@ -36,9 +39,9 @@ st.scatter_chart(map_data)
 
 col1, col2 = st.columns(2)
 with col1:
-    st.metric("Metric A", 123)
+    st.metric("Total Cost", f"${result['cost']}")
 with col2:
-    st.metric("Metric B", 456)
+    st.metric("CO₂ Emissions", f"{result['co2']} kg")
 
 # Inputs
 
