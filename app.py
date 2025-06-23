@@ -6,6 +6,15 @@ map_data = pd.DataFrame({
     'lon': [46.6753, 46.6800, 46.6900]
 })
 
+result = {
+    "cost": 3200,
+    "co2": 240,
+    "distance": 345,
+    "delivery_times": [...],
+    "vehicle_utilization": {...},
+    "delayed_deliveries": 3
+}
+
 #  Page Configuration
 
 st.set_page_config(page_title="SmartDispatch Dashboard", layout="wide")
