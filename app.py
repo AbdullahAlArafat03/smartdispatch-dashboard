@@ -88,6 +88,6 @@ if st.button("Run Optimizer"):
 
 # Displaying Data
 
-st.table(df)
-st.dataframe(df)
-st.json(data)
+st.table(map_data)
+st.dataframe(map_data)
+st.json(map_data)
