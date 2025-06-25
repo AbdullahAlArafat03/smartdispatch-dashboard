@@ -90,3 +90,5 @@ if st.button("Run Optimizer"):
 
 st.table(map_data)
 st.dataframe(map_data)
+st.header("Editor")
+st.data_editor(map_data)
