@@ -90,4 +90,3 @@ if st.button("Run Optimizer"):
 
 st.table(map_data)
 st.dataframe(map_data)
-st.json(map_data)
