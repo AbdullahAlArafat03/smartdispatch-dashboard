@@ -34,6 +34,10 @@ vehicle_type = st.sidebar.selectbox("Vehicle Type", ["Truck", "Bike", "Van"])
 fleet_size = st.sidebar.slider("Number of vehicles", 1, 50, 10)
 add_location = st.sidebar.text_input("New delivery point (lat,lon)")
 delivery_deadline = st.sidebar.time_input("Latest delivery time")
+eco_co2_limit = st.sidebar.number_input(label="CO₂ Emission Limit (kg)",
+    min_value=0.0,
+    step=1.0,
+    value=100.0)
 st.sidebar.button("Run")
 
 # Layouts
