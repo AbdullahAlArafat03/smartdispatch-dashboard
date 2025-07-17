@@ -1,12 +1,26 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import streamlit as st
 import pandas as pd
 
-map_data = pd.DataFrame({
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/map-data")
+def map_data(): data = ({
     'lat': [24.7136, 24.7200, 24.7300],
     'lon': [46.6753, 46.6800, 46.6900]
 })
+return data
 
-result = {
+@app.get("/results")
+def result(): return {
     "cost": 3200,
     "co2": 240,
     "distance": 345,
